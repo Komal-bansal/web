@@ -1,0 +1,63 @@
+<style>
+    h1{
+        color: lightcyan
+    }
+ .container{
+
+        background-color: gray;
+    }
+    
+    .container3{
+background-color: gainsboro;
+        display: inline-block;
+        list-style-type: none;
+        margin: 10px;
+        padding: 10px;
+        
+    }
+    
+    container4{
+        background-color: gray;
+       
+        list-style-type: none;
+        
+        
+    }
+    
+    .pic
+    {
+        height: 100px;
+        width: 100px;
+/*
+        border-bottom-left-radius: 2px;
+        border-color: black;
+*/
+    }
+</style>
+
+
+<h1>electronics section</h1>
+<div class="container">
+     <center>
+      <div ng-app="spaapp" ng-controller="electronicsctrl" >
+       <ul ng-repeat="obj in result.data.mobiles|filter:search|orderBy:sortBy:order" class="container3" >
+          
+           <li >
+           <div>
+           <img ng-src="{{obj.image}}" class="pic">
+<!--           <h1>id:{{obj.id}}</h1>-->
+               <p><center>${{obj.price}}</center>  </p>
+            <p>{{obj.shipping}}  </p>
+            <p>{{obj.vendor}}  </p>
+            
+            </div>
+             </li>
+             
+      
+      {{electronicsdata}}
+       </ul>
+   
+    </div>
+    </center>
+    </div>
+

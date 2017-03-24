@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="libs/angular.min.js"></script>
+    <script src="libs/angular-route.min.js"></script>
+    <script src="module/app.js"></script>
+     <script src="js/shoes/smodel.js"></script>
+     <script src="js/clothes/cmodel.js"></script>
+     <script src="js/electronics/emodel.js"></script>
+    <script src="js/shoes/sctrl.js"></script>
+    <script src="js/clothes/cctrl.js"></script>
+    <script src="js/electronics/ectrl.js"></script>
+    <script src="routes/spa-routes.js"></script>
+    
+</head>
+
+<body ng-app="spaapp">
+<!--
+    <header>
+       <li><a ng-href="#/">Sign Up</a></li>
+       <li><a ng-href="#/">Login</a></li> 
+    </header>
+-->
+      
+       <div class="navbar">
+        <ul>
+            <li><img src="logo.png" width="40px" height="40px"></li>
+            <li><a ng-href="#/">SHOP CART</a></li>
+            <li><a ng-href="#/shoes">Shoes</a></li>
+            <li><a ng-href="#/clothes">Clothes</a></li>
+            <li><a ng-href="#/electronics">Electronics</a></li>
+<!--
+             <li class="dropdown">
+                <a class="dropbtn">Electronics</a>
+                    <select class="dropdown-content">
+                        <option value=""><a ng-href="#/">Mobile</a></option>
+                        <option value=""><a ng-href="#/">Laptop</a></option>
+                        <option value=""><a ng-href="#/">Home Appliances</a></option>
+                        <option value=""><a ng-href="#/">Featured</a></option>  
+                    </select>
+            </li>
+        
+            <li class="dropdown">
+                <a class="dropbtn">Men</a>
+                    <select class="dropdown-content">
+                        <option value=""><a ng-href="#/">Clothing</a></option>
+                        <option value=""><a ng-href="#/">Footwear</a></option>
+                        <option value=""><a ng-href="#/">Watches</a></option>
+                        <option value=""><a ng-href="#/">Featured</a></option>  
+                    </select>
+            </li>
+             <li class="dropdown">
+                <a class="dropbtn">Woman</a>
+                    <select class="dropdown-content">
+                        <option value=""><a ng-href="#/">Clothing</a></option>
+                        <option value=""><a ng-href="#/">Footwear</a></option>
+                        <option value=""><a ng-href="#/">Watches</a></option>
+                        <option value=""><a ng-href="#/">Featured</a></option>  
+                    </select>
+            </li>
+            
+             <li class="dropdown">
+                <a class="dropbtn">Appliances</a>
+                    <select class="dropdown-content">
+                        <option value=""><a ng-href="#/">Television</a></option>
+                        <option value=""><a ng-href="#/">Washing machines</a></option>
+                        <option value=""><a ng-href="#/">Kitchen Appliances</a></option>
+                        <option value=""><a ng-href="#/">Featured</a></option>  
+                    </select>
+            </li>
+            
+             <li class="dropdown">
+                <a class="dropbtn">Furniture</a>
+                    <select class="dropdown-content">
+                        <option value=""><a ng-href="#/">Kitchen and Dining</a></option>
+                        <option value=""><a ng-href="#/">Home Decor</a></option>
+                        <option value=""><a ng-href="#/">Furniture</a></option>
+                        <option value=""><a ng-href="#/">Featured</a></option>  
+                    </select>
+            </li>
+-->
+            <li><a><input type="textarea" placeholder="Type here to search" style="margin:0px 0px 0px 500px" ng-model="search" ></a></li>
+            <li class="dropdown">
+                <a  class="dropbtn" >Filter</a>
+                <select  ng-model="sortBy" class="dropdown-content">
+                    <option >price</option>
+                    <option>name</option>
+                    
+                </select>
+                <input type="checkbox" ng-model="order">
+            </li>
+        </ul>
+    </div>
+    <ng-view></ng-view>
+
+    
+</body>
+
+</html>

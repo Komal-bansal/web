@@ -1,0 +1,65 @@
+<style>
+    h1{
+        color: aliceblue;
+    }
+    .container{
+
+        background-color: gray;
+    }
+    
+    .container3{
+background-color: gainsboro;
+        display: inline-block;
+        list-style-type: none;
+        margin: 40px;
+        padding: 40px;
+    }
+    
+    container4{
+        background-color: gray;
+        border-width: 2px;
+        list-style-type: none;
+        margin: 20px;
+        padding: 50px;
+        
+    }
+    
+    .pic
+    {
+        height: 200px;
+        width: 200px;
+/*
+        border-bottom-left-radius: 2px;
+        border-color: black;
+*/
+    }
+    
+    
+</style>
+
+
+<h1>clothes section</h1>
+
+<div class="container">
+<div ng-app="spaapp" ng-controller="clothesctrl">
+       <ul ng-repeat="obj in result.data.clothes|filter:search|orderBy:sortBy:order" class="container3">
+          
+           <li>
+           <div class="container4">
+        <img ng-src="{{obj.image[0]}}" class="pic"> 
+<!--           <p>{{obj.id}}  </p>-->
+            <p>{{obj.name}}  </p>
+            <p>available in {{obj.color}}  </p>
+            <p>${{obj.price}}  </p>
+           
+            
+          
+            </div>
+             </li>
+             
+      
+      
+       </ul>
+   
+    </div>
+</div>

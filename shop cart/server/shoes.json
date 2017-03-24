@@ -1,0 +1,21 @@
+{
+    "shoesdata": [{
+        "id": 1001,
+        "name": "Nike",
+        "img": "http://images.footlocker.com/pi/31070100/large/nike-free-rn-flyknit-womens",
+        "price": 2000,
+        "discount": 10
+    }, {
+        "id": 1002,
+        "name": "Puma",
+        "img": "http://cdn.shopclues.com/images/thumbnails/48669/200/200/PumaADAMOBlue11480751686.jpg",
+        "price": 3000,
+        "discount": 12
+    }, {
+        "id": 1002,
+        "name": "Adidas",
+        "img": "http://images.footaction.com/pi/82695/large/adidas-originals-zx-flux-boys-grade-school",
+        "price": 4000,
+        "discount": 15
+    }]
+}
