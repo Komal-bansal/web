@@ -30,19 +30,35 @@
         height:40px;
         z-index: -1;
     }
-    
+    .completed{
+        text-decoration: line-through;
+        color: red;
+        font-style: italic;
+    }
+    .li{
+        cursor: pointer;
+        text-align: justify;
+    }
 
     </style>
 <script src="angular.min.js"></script>
 <script src="js/app.js"></script>
+<script src="js/todoFactory.js"></script>
 <script src="js/todoctrl.js"></script>
 <body ng-app="todoapp" ng-controller="todoctrl" >
-    <center><img src="do.png">
+    <center>
+    <div >Completed task::{{taskObject.countCompleted()}}</div>
+    <div>Pending task::{{taskObject.countPending()}}</div>
+    <img src="do.png">
     <br>
     <br>
-<input class="task" type="text" placeholder="   Add task here" ng-model="task" onclick="show()">
-<button ng-click="addtask()" class="add-btn">Add task</button>    
-<ul><li ng-repeat="x in arr">{{x}}<span ng-click="deletetask($index)">&times</span></li></ul>
+    <i style="color:green;font-size:14px">Mark the task as completed by clicking on it</i>
+    <br>
+<input class="task" type="text" placeholder="   Add task here" ng-model="todoTask" id="task">
+<button ng-click="taskObject.addTask()" class="add-btn">Add task</button>
+<button ng-click="taskObject.removeCompletedTask()" class="add-btn">Remove task</button>    
+<ul><li ng-repeat="x in taskObject.taskList" ng-click="x.toggle()" ng-class="{completed : x.isCompleted}">
+        {{task.name}}>{{x.todoTask}}</li></ul>
 
         </center>
 </body>
